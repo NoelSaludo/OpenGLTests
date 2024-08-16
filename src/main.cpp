@@ -25,6 +25,7 @@
 #include "test/ClearColorTest.h"
 #include "test/ObjectColorTest.h"
 #include "test/ProjectionsTest.h"
+#include "test/TexTest.h"
 
 int main(void)
 {
@@ -67,16 +68,15 @@ int main(void)
         ImGui_ImplGlfw_InitForOpenGL(window, true);
         ImGui_ImplOpenGL3_Init();
 
-        test::ClearColorTest test;
-        test::ObjectColorTest objcolor;
-        test::Test *currentTest = nullptr;
 
+        test::Test *currentTest = nullptr;
         test::TestMenu* testMenu = new test::TestMenu(currentTest);
         currentTest = testMenu;
 
          testMenu->AddTest<test::ClearColorTest>("Clear color test");
          testMenu->AddTest<test::ObjectColorTest>("Object color test");
          testMenu->AddTest<test::ProjectionsTest>("Projection test");
+         testMenu->AddTest<test::TexTest>("Texture test");
 
         while (!glfwWindowShouldClose(window)){
             GLCALL(glClearColor(0.0f,0.0f,0.0f,1.0f))
@@ -99,6 +99,7 @@ int main(void)
 
             glfwPollEvents();
         }
+        delete testMenu, currentTest;
     }
     
     // Cleanup
