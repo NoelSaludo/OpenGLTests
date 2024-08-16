@@ -24,6 +24,7 @@
 //tests
 #include "test/ClearColorTest.h"
 #include "test/ObjectColorTest.h"
+#include "test/ProjectionsTest.h"
 
 int main(void)
 {
@@ -75,6 +76,7 @@ int main(void)
 
          testMenu->AddTest<test::ClearColorTest>("Clear color test");
          testMenu->AddTest<test::ObjectColorTest>("Object color test");
+         testMenu->AddTest<test::ProjectionsTest>("Projection test");
 
         while (!glfwWindowShouldClose(window)){
             GLCALL(glClearColor(0.0f,0.0f,0.0f,1.0f))

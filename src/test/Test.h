@@ -22,15 +22,17 @@ namespace test {
 
         void OnImGuiRender() override;
 
+        ///
+        /// \tparam T takes only classes that inherits from test
+        /// \param title title of the function
+        /// \brief Adds Tests for the menu
         template <typename T>
-        void AddTest(const std::string& name);
+        void AddTest(const std::string& title) {
+            this->m_Tests.push_back(std::make_pair(title, [](){return new T();}));
+        }
     private:
         Test*& m_CurrentTest;
         std::vector<std::pair<std::string, std::function<Test*()>>> m_Tests;
     };
 
-    template <typename T>
-    void TestMenu::AddTest(const std::string& name) {
-        this->m_Tests.push_back(std::make_pair(name, [](){return new T();}));
-    }
 }

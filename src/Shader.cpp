@@ -10,7 +10,6 @@
 Shader::Shader(const std::string& filepath) : m_Filepath(filepath), m_RendererID(0) {
     ShaderProgramSource source = this->ParseShader(filepath);
     m_RendererID = this->CreateShader(source.VertexSource, source.FragmentSource);
-    std::cout << std::format("{}\n{}",source.VertexSource,source.FragmentSource);
 }
 
 Shader::~Shader() {
