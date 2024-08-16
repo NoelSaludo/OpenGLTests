@@ -5,7 +5,6 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <format>
 
 #include "renderer.h"
 #include "VertexBuffer.h"
@@ -55,10 +54,8 @@ int main(void)
     std::cout << glGetString(GL_VERSION) <<'\n';
 
     {
-
         Renderer renderer;
 
-        
         GLCALL(glBlendFunc(GL_SRC_ALPHA,GL_ONE_MINUS_SRC_ALPHA))
         GLCALL(glEnable(GL_BLEND))
 
@@ -77,8 +74,10 @@ int main(void)
         currentTest = testMenu;
 
          testMenu->AddTest<test::ClearColorTest>("Clear color test");
-        
+         testMenu->AddTest<test::ObjectColorTest>("Object color test");
+
         while (!glfwWindowShouldClose(window)){
+            GLCALL(glClearColor(0.0f,0.0f,0.0f,1.0f))
             renderer.Clear();
             ImGui_ImplOpenGL3_NewFrame();
             ImGui_ImplGlfw_NewFrame();
@@ -91,7 +90,7 @@ int main(void)
                 }
                 currentTest->OnImGuiRender();
             }
-            ImGui::Render(); 
+            ImGui::Render();
             ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
             
             glfwSwapBuffers(window);

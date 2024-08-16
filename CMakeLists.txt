@@ -3,8 +3,6 @@ project(OpenGLApp)
 
 set(CMAKE_CXX_STANDARD 20)
 
-file(COPY ${CMAKE_SOURCE_DIR}/res DESTINATION ${CMAKE_BINARY_DIR})
-
 include(FetchContent)
 fetchcontent_declare(
         glew

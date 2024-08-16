@@ -8,7 +8,7 @@ out vec2 u_TexCoord;
 
 uniform mat4 u_MVP;
   
-void main()  
+void main()
 {  
    gl_Position = u_MVP*position;
    u_TexCoord = texCoord;
