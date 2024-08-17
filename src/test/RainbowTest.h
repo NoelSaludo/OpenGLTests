@@ -11,7 +11,7 @@
 #include "VertexBuffer.h"
 #include "IndexBuffer.h"
 #include "Shader.h"
-#include "renderer.h"
+#include "Renderer.h"
 
 #include <memory>
 

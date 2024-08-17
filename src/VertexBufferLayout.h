@@ -3,7 +3,7 @@
 #include <vector>
 #include <GL/glew.h>
 
-#include "renderer.h"
+#include "Renderer.h"
 
 struct VertexBufferElement {
     unsigned int type;

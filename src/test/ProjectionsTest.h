@@ -1,7 +1,7 @@
 #pragma once
 #include "Test.h"
 
-#include "renderer.h"
+#include "Renderer.h"
 #include "VertexArray.h"
 #include "VertexBuffer.h"
 #include "IndexBuffer.h"

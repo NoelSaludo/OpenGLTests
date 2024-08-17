@@ -1,6 +1,6 @@
 ﻿#include "ClearColorTest.h"
 
-#include "../renderer.h"
+#include "../Renderer.h"
 #include "imgui/imgui.h"
 
 test::ClearColorTest::ClearColorTest() : m_Color{1.0,1.0,1.0,1.0} {

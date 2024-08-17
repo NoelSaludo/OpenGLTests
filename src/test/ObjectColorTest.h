@@ -3,7 +3,7 @@
 #include <memory>
 #include "Test.h"
 
-#include "renderer.h"
+#include "Renderer.h"
 #include "IndexBuffer.h"
 #include "Shader.h"
 #include "VertexArray.h"
