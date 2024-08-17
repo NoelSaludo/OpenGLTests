@@ -48,3 +48,14 @@ target_include_directories(OpenGLApp
         ${CMAKE_SOURCE_DIR}/src
 )
 target_link_libraries(OpenGLApp glfw glew_s OpenGL::GL)
+
+install(TARGETS OpenGLApp DESTINATION bin)
+install(DIRECTORY ${CMAKE_SOURCE_DIR}/res DESTINATION .)
+
+include(InstallRequiredSystemLibraries)
+set(CPACK_GENERATOR "NSIS")
+set(CPACK_PACKAGE_NAME "OpenGLTest")
+set(CPACK_NSIS_DISPLAY_NAME "OpenGLTest")
+set(CPACK_NSIS_PACKAGE_NAME "OpenGLTest")
+set(CPACK_NSIS_MODIFY_PATH ON)
+include(CPack)

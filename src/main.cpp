@@ -26,6 +26,7 @@
 #include "test/ObjectColorTest.h"
 #include "test/ProjectionsTest.h"
 #include "test/TexTest.h"
+#include "test/RainbowTest.h"
 
 int main(void)
 {
@@ -40,7 +41,7 @@ int main(void)
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
     auto monitor = glfwGetPrimaryMonitor();
-    window = glfwCreateWindow(960, 540, "Hello World", nullptr, nullptr);
+    window = glfwCreateWindow(1600, 1080, "Hello World", nullptr, nullptr);
 
     if (!window) {
         glfwTerminate();
@@ -77,6 +78,7 @@ int main(void)
          testMenu->AddTest<test::ObjectColorTest>("Object color test");
          testMenu->AddTest<test::ProjectionsTest>("Projection test");
          testMenu->AddTest<test::TexTest>("Texture test");
+         testMenu->AddTest<test::RainbowTest>("Rainbow test");
 
         while (!glfwWindowShouldClose(window)){
             GLCALL(glClearColor(0.0f,0.0f,0.0f,1.0f))

@@ -3,7 +3,7 @@
 #include "imgui/imgui.h"
 
 test::ProjectionsTest::ProjectionsTest()
-    : m_Proj(glm::ortho(0.0f,960.0f,0.0f,540.0f,-1.0f,1.0f)),
+    : m_Proj(glm::ortho(0.0f,1600.0f,0.0f,1080.0f,-1.0f,1.0f)),
       m_ViewVec3(0.0f,0.0f,0.0f),
       m_ModelVec3(0.0f,0.0f,0.0f){
     float vertices[] = {
