@@ -41,7 +41,7 @@ int main(void)
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
     auto monitor = glfwGetPrimaryMonitor();
-    window = glfwCreateWindow(1600, 1080, "Hello World", nullptr, nullptr);
+    window = glfwCreateWindow(960, 540, "Hello World", nullptr, nullptr);
 
     if (!window) {
         glfwTerminate();

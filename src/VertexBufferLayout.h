@@ -32,12 +32,6 @@ public:
     template<typename T>
     void Push(unsigned int count);
 
-    template<>
-    void Push<float>(unsigned int count); 
-    template<>
-    void Push<unsigned int>(unsigned int count);
-    template<>
-    void Push<unsigned char>(unsigned int count); 
 
     inline const std::vector<VertexBufferElement>& GetElements() const {return m_Elements; }
     inline const unsigned int GetStride() const { return m_Stride; }

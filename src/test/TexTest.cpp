@@ -9,9 +9,9 @@ test::TexTest::TexTest()
   m_TranslationModel(0.0f,0.0f,0.0f) {
     float positions[] = {
             0.0f, 0.0f, 0.0f, 0.0f,
-             400.0f, 0.0f, 1.0f, 0.0f,
-             400.0f,  400.0f, 1.0f, 1.0f,
-            0.0f,  400.0f, 0.0f, 1.0f
+             200.0f, 0.0f, 1.0f, 0.0f,
+             200.0f,  200.0f, 1.0f, 1.0f,
+            0.0f,  200.0f, 0.0f, 1.0f
     };
 
     unsigned int indices[] = {
@@ -34,7 +34,7 @@ test::TexTest::TexTest()
 
     this->m_Shader = std::make_unique<Shader>("../res/shaders/Basic.shader");
     this->m_Shader->Bind();
-    this->m_Texture = std::make_unique<Texture>("../res/textures/jr.jpg");
+    this->m_Texture = std::make_unique<Texture>("../res/textures/brick.png");
     this->m_Texture->Bind();
     this->m_Shader->SetUniform1i("u_Texture", 0);
 
@@ -60,6 +60,6 @@ void test::TexTest::OnRender() {
 
 void test::TexTest::OnImGuiRender() {
     ImGui::ColorEdit4("Square Color", this->m_Color);
-    ImGui::SliderFloat3("View Translation", &this->m_TranslationView.x, 960.0f, -960.0f);
-    ImGui::SliderFloat3("Model Translation", &this->m_TranslationModel.x, -960.0f, 960.0f);
+    ImGui::SliderFloat3("View Translation", &this->m_TranslationView.x, -540.0f, 540.0f);
+    ImGui::SliderFloat3("Model Translation", &this->m_TranslationModel.x, -540.0f, 540.0f);
 }

@@ -19,8 +19,6 @@ namespace test {
         unsigned int indices[] = {
                 0, 1, 4,
                 4, 3, 2,
-                0,4,3,
-                1,4,2
         };
 
         this->m_VAO = std::make_unique<VertexArray>();
