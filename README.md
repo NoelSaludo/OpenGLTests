@@ -18,11 +18,14 @@ The executable file or binary should be in the build directory named OpenGLApp. 
 - Simulating a Projection
 - Rendering a Texture
 - Rendering a Rainbow
-## Future Tests to Add
 - Batch Rendering
+## Future Tests to Add
 - 3D rendering
 - Coordinates
 - Lighting
 - Donut
 - Physics
 - Grass Field
+## Note 
+This is a project to learn OpenGL and Computer Graphics. The code is not optimized and may contain bugs. It currently runs on Windows.
+
