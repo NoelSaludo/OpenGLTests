@@ -27,6 +27,7 @@
 #include "test/ProjectionsTest.h"
 #include "test/TexTest.h"
 #include "test/RainbowTest.h"
+#include "test/BatchRenderTest.h"
 
 int main(void)
 {
@@ -79,6 +80,7 @@ int main(void)
          testMenu->AddTest<test::ProjectionsTest>("Projection test");
          testMenu->AddTest<test::TexTest>("Texture test");
          testMenu->AddTest<test::RainbowTest>("Rainbow test");
+         testMenu->AddTest<test::BatchRenderTest>("Batching test");
 
         while (!glfwWindowShouldClose(window)){
             GLCALL(glClearColor(0.0f,0.0f,0.0f,1.0f))

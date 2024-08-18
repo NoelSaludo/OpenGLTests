@@ -36,7 +36,9 @@ file(GLOB HEADER_FILES
         ${CMAKE_SOURCE_DIR}/src/vendor/imgui/*.h
         ${CMAKE_SOURCE_DIR}/src/vendor/stb_image/*.h
         ${CMAKE_SOURCE_DIR}/src/test/*.h)
-add_executable(OpenGLApp ${HEADER_FILES} ${SRC_FILES})
+add_executable(OpenGLApp ${HEADER_FILES} ${SRC_FILES}
+        src/test/BatchRenderTest.cpp
+        src/test/BatchRenderTest.h)
 
 add_compile_definitions(GLEW_STATIC)
 

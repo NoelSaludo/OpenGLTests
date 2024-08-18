@@ -13,6 +13,8 @@ public:
     void Bind(unsigned int slot = 0) const;
     void Unbind() const;
 
+    unsigned int getMRendererId() const;
+
     inline int GetWidth() const {
         return m_Width;
     }

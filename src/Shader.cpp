@@ -116,3 +116,7 @@ unsigned int Shader::CreateShader(const std::string& vertexShader, const std::st
 
     return program;
 }
+
+unsigned int Shader::getMRendererId() const {
+    return m_RendererID;
+}
