@@ -8,6 +8,10 @@ public:
 
     void Bind() const;
     void UnBind() const;
+
+
+    [[nodiscard]] unsigned int getRendererID() const { return m_RendererID; }
+
 private:
     unsigned int m_RendererID;
 };

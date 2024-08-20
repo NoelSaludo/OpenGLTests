@@ -14,6 +14,10 @@ public:
         return m_Count;
     }
 
+    [[nodiscard]] unsigned int getRendererID(){
+        return m_RendererID;
+    }
+
 private:
     unsigned int m_RendererID;
     unsigned int m_Count;

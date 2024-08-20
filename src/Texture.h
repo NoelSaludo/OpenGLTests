@@ -16,6 +16,7 @@ public:
     unsigned int getMRendererId() const;
 
     inline int GetWidth() const {
+
         return m_Width;
     }
 
