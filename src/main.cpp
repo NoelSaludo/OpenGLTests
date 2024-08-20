@@ -20,6 +20,7 @@
 #include "test/TexTest.h"
 #include "test/RainbowTest.h"
 #include "test/BatchRenderTest.h"
+#include "test/Rotation.h"
 
 int main(void)
 {
@@ -74,6 +75,7 @@ int main(void)
          testMenu->AddTest<test::TexTest>("Texture test");
          testMenu->AddTest<test::RainbowTest>("Rainbow test");
          testMenu->AddTest<test::BatchRenderTest>("Batching test");
+         testMenu->AddTest<test::Rotation>("Rotation test");
 
         while (!glfwWindowShouldClose(window)){
             GLCALL(glClearColor(0.0f,0.0f,0.0f,1.0f))

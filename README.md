@@ -19,6 +19,7 @@ The executable file or binary should be in the build directory named OpenGLApp. 
 - Rendering a Texture
 - Rendering a Rainbow
 - Batch Rendering
+- Rotation
 ## Future Tests to Add
 - 3D rendering
 - Coordinates

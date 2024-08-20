@@ -38,7 +38,9 @@ file(GLOB HEADER_FILES
         ${CMAKE_SOURCE_DIR}/src/test/*.h)
 add_executable(OpenGLApp ${HEADER_FILES} ${SRC_FILES}
         src/test/BatchRenderTest.cpp
-        src/test/BatchRenderTest.h)
+        src/test/BatchRenderTest.h
+        src/test/Rotation.cpp
+        src/test/Rotation.h)
 
 add_compile_definitions(GLEW_STATIC)
 
