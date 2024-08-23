@@ -21,6 +21,8 @@
 #include "test/RainbowTest.h"
 #include "test/BatchRenderTest.h"
 #include "test/Rotation.h"
+#include "test/ThirdDimTest.h"
+
 
 int main(void)
 {
@@ -56,6 +58,7 @@ int main(void)
 
         GLCALL(glBlendFunc(GL_SRC_ALPHA,GL_ONE_MINUS_SRC_ALPHA))
         GLCALL(glEnable(GL_BLEND))
+        GLCALL(glViewport(0,0,960,540));
 
         IMGUI_CHECKVERSION();
         ImGui::CreateContext();
@@ -76,6 +79,7 @@ int main(void)
          testMenu->AddTest<test::RainbowTest>("Rainbow test");
          testMenu->AddTest<test::BatchRenderTest>("Batching test");
          testMenu->AddTest<test::Rotation>("Rotation test");
+         testMenu->AddTest<test::ThirdDimTest>("Third Dimension test");
 
         while (!glfwWindowShouldClose(window)){
             GLCALL(glClearColor(0.0f,0.0f,0.0f,1.0f))

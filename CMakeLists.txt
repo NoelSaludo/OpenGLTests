@@ -36,11 +36,7 @@ file(GLOB HEADER_FILES
         ${CMAKE_SOURCE_DIR}/src/vendor/imgui/*.h
         ${CMAKE_SOURCE_DIR}/src/vendor/stb_image/*.h
         ${CMAKE_SOURCE_DIR}/src/test/*.h)
-add_executable(OpenGLApp ${HEADER_FILES} ${SRC_FILES}
-        src/test/BatchRenderTest.cpp
-        src/test/BatchRenderTest.h
-        src/test/Rotation.cpp
-        src/test/Rotation.h)
+add_executable(OpenGLApp ${HEADER_FILES} ${SRC_FILES})
 
 add_compile_definitions(GLEW_STATIC)
 
@@ -52,14 +48,3 @@ target_include_directories(OpenGLApp
         ${CMAKE_SOURCE_DIR}/src
 )
 target_link_libraries(OpenGLApp glfw glew_s OpenGL::GL)
-
-install(TARGETS OpenGLApp DESTINATION bin)
-install(DIRECTORY ${CMAKE_SOURCE_DIR}/res DESTINATION .)
-
-include(InstallRequiredSystemLibraries)
-set(CPACK_GENERATOR "NSIS")
-set(CPACK_PACKAGE_NAME "OpenGLTest")
-set(CPACK_NSIS_DISPLAY_NAME "OpenGLTest")
-set(CPACK_NSIS_PACKAGE_NAME "OpenGLTest")
-set(CPACK_NSIS_MODIFY_PATH ON)
-include(CPack)
